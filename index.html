@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>To Do List</h1>
+
+  </header>
+  <section>
+    <div class="pencil">
+      <div class="pencil__eraser"></div>
+      <div class="pencil__metal"></div>
+      <div class="pencil__wood">
+        <div class="pencil__wood--shadow"></div>
+      </div>
+      <div class="pencil__triagle">
+        <div class="pencil__triagle--grafit"></div>
+      </div>
+    </div>
+    <div class="notebook">
+      <div class="paper">
+        <div class="fortodo">
+          <form class="forinput" action="index.html" method="post" onsubmit="addTask()">
+            <label for="todo">To do:</label>
+            <input type="text" name="todo" value="My task" maxlength="40" width="600" id="taskInput">
+            <button type="button" name="button" id="add">+ Add task</button>
+            <button type="button" name="button" id="save">Save</button>
+          </form>
+          <div>
+            <ol id="fortask">
+
+            </ol>
+          </div>
+        </div>
+        <div class="square"></div>
+        <div class="circle"></div>
+        <div class="redline"></div>
+        <div class="blueline"></div>
+      </div>
+    </div>
+    <div class="organiser">
+      <div class="calendar">
+        <div class="calendar__metal calendar__metal--first"></div>
+        <div class="calendar__metal calendar__metal--second"></div>
+        <div class="calendar__card">
+          <div class="month" id="month"></div>
+          <div class="day" id="day"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+
+  </footer>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

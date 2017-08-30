@@ -1,0 +1,247 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+body{
+  background-color: #89c3e8;
+  font-family: 'Amatic SC', cursive;
+}
+h1{
+  font-size: 8em;
+  color: white;
+  text-align: center;
+  margin: 30px 0 30px 0;
+}
+section{
+  display: grid;
+  grid-template-columns: 15% 65% 20%;
+
+}
+
+/*pencil*/
+
+.pencil{
+  position: relative;
+  -webkit-transform: rotate(5deg);
+  margin-left: 20%;
+}
+.pencil>div{
+  position: absolute;
+  width: 50px;
+  left: 45%;
+}
+.pencil__eraser{
+  height: 50px;
+  background: linear-gradient(to right, #ff9191 50%, #e58080 ) ;
+  border-radius: 10px 10px 0 0;
+  top: 0;
+}
+.pencil__metal{
+  height: 30px;
+  background: linear-gradient(to bottom right, white, #e3ddda 70%) ;
+  top: 50px;
+}
+.pencil__wood{
+  height: 400px;
+  background-color: #ffda00;
+  top: 80px;
+}
+.pencil__wood--shadow{
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 25px;
+  background-color: #dbba00;
+}
+.pencil__triagle{
+  width: 0 !important;
+  height: 0;
+  top: 480px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 70px solid #ffdd7c;
+}
+.pencil__triagle--grafit{
+  width: 0 !important;
+  height: 0;
+  top: -20px; left:-8px;
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 20px solid black;
+}
+
+/*notebook*/
+
+.notebook{
+
+}
+.fortodo{
+  height: 100%;
+  width: 70%;
+  position: absolute;
+  left: 20%;
+}
+.forinput{
+  width: 100%;
+  height: 12%
+}
+label, input, button{
+  margin: 20px 15px 0 0;
+  font-size: 2em;
+}
+label{
+  font-size: 2.5em;
+  font-weight: bold;
+}
+input{
+  background: rgba(255, 255, 255, 0.7);
+
+}
+button{
+  padding: 5px;
+  background-color: white;
+  border: 2px solid #44b0b5;
+  font-family: 'Amatic SC', cursive;
+}
+.task{
+  width: 100%;
+  font-size: 2.5em;
+  font-weight: bold;
+  height: 50px;
+  padding-top: 2px;
+  box-sizing: border-box;
+  position: relative;
+}
+.task button{
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-top: -2px;
+  padding: 3px 5px;
+}
+
+.del{
+  width: 1px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  margin-top: -25px;
+  margin-left: 30px;
+}
+
+.delanim{
+  width: 1px;
+  height: 2px;
+  position: absolute;
+  margin-top: -25px;
+  margin-left: 250px;
+  background-color: black;
+  transform: scaleX(500);
+  transform-origin: center;
+  transition: all 200ms;
+}
+
+.paper{
+  width: 80%;
+  height: 650px;
+  background-color: #fbf289;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px #252525;
+}
+.square{
+  width: 20px;
+  height: 10px;
+  background-color: #89c3e8;
+  position: absolute;
+  top: 20px;
+  box-shadow: 0 50px 0 #89c3e8, 0 100px 0 #89c3e8, 0 150px 0 #89c3e8,
+              0 200px 0 #89c3e8, 0 250px 0 #89c3e8, 0 300px 0 #89c3e8,
+              0 350px 0 #89c3e8, 0 400px 0 #89c3e8, 0 450px 0 #89c3e8,
+              0 500px 0 #89c3e8, 0 550px 0 #89c3e8, 0 600px 0 #89c3e8;
+}
+.circle{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #89c3e8;
+  position: absolute;
+  top: 10px; left:10px;
+  box-shadow: 0 50px 0 #89c3e8, 0 100px 0 #89c3e8, 0 150px 0 #89c3e8,
+              0 200px 0 #89c3e8, 0 250px 0 #89c3e8, 0 300px 0 #89c3e8,
+              0 350px 0 #89c3e8, 0 400px 0 #89c3e8, 0 450px 0 #89c3e8,
+              0 500px 0 #89c3e8, 0 550px 0 #89c3e8, 0 600px 0 #89c3e8;
+}
+.redline{
+  height: 100%;
+  width: 2px;
+  background-color: #c43c19;
+  position: absolute;
+  left: 15%;
+  z-index: 2;
+}
+.blueline{
+  height: 2px;
+  width: 90%;
+  background-color: #44b0b5;
+  position: absolute;
+  top: 12%; left: 15%;
+  box-shadow: 0 50px 0 #44b0b5, 0 100px 0 #44b0b5, 0 150px 0 #44b0b5,
+              0 200px 0 #44b0b5, 0 250px 0 #44b0b5, 0 300px 0 #44b0b5,
+              0 350px 0 #44b0b5, 0 400px 0 #44b0b5, 0 450px 0 #44b0b5,
+              0 500px 0 #44b0b5;
+}
+
+
+
+/*calendar*/
+.calendar{
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: #44b0b5;
+  position: relative;
+  box-shadow: 5px 5px 5px #252525;
+}
+.calendar__metal{
+  width: 20px;
+  height: 70px;
+  background: linear-gradient(to bottom right, white, #e3ddda 70%);
+  border-radius: 10px;
+  position: absolute;
+  top: -20px;
+  z-index: 2;
+  box-shadow: 5px 5px 5px #252525;
+}
+.calendar__metal--first{
+  left: 20%;
+}
+.calendar__metal--second{
+  left: 75%;
+}
+.calendar__card{
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  position: absolute;
+  top: 8%; left: 10%;
+  border-radius: 20px;
+}
+.month{
+  margin-top: 20%;
+  text-align: center;
+  color: #44b0b5;
+  font-size: 3em;
+}
+.day{
+  text-align: center;
+  color: #44b0b5;
+  font-size: 6em;
+  font-weight: 700;
+}
