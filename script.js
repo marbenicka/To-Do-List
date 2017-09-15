@@ -2,8 +2,12 @@ const myInput = document.querySelector('input');
 const forTask = document.getElementsByClassName('fortask');
 const addButton = document.getElementById('add');
 const saveButton = document.getElementById('save');
-
-
+const myForm = document.querySelector('form');
+const myList = document.querySelector('ol');
+const myListValue = myList.value;
+const list = myList.length;
+var i = 0;
+var num = 0;
 //Delete default value from input
 function clearInput() {
   if (myInput.value !== ""){
@@ -13,6 +17,7 @@ function clearInput() {
 
 function addTask() {
   //Create task
+  if (num<10){
   var newLi = document.createElement('li');
   var myTask = myInput.value;
   var forTask = document.getElementById('fortask');
@@ -25,8 +30,12 @@ function addTask() {
   newLi.append(myTask);
   newLi.append(closeX);
   forTask.append(newLi);
+  i += 1
+  num += 1
 
   newLi.className = 'task';
+  newLi.id = 'task'+i;
+
 //Event for checked and delete button
   newLi.addEventListener('click', function delDel(){
     if (del.className == 'delanim'){
@@ -37,8 +46,10 @@ function addTask() {
   })
   closeX.addEventListener('click', function removeTask() {
     newLi.remove();
-  });
-}
+	num -= 1;
+  });} else{
+	  return;
+}}
 
 //Update date on calendar
 function updateDate(e){
@@ -54,11 +65,13 @@ function updateDate(e){
 
   calday.innerHTML= day;
   calmonth.innerHTML= month;
-};
+}
 
 myInput.addEventListener('focus', clearInput, false);
 addButton.addEventListener('click', addTask, false);
 window.addEventListener('load', updateDate, false);
 saveButton.addEventListener('click', function saving(){
+	localStorage.setItem(list, myListValue);
+	console.log(myListValue);
+});
 
-})
